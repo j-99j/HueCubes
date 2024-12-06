@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Generator</title>
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gradient Generator</h1>
+        <p>Create gradients using Minecraft block textures!</p>
+    </header>
+
+    <main>
+        <div class="input-section">
+            <!-- Block Selection Canvases -->
+            <div class="block-canvas" id="block1-canvas" onclick="selectBlock(1)">
+                <p id="block1-text">Click to select Block 1</p>
+            </div>
+            <div class="block-canvas" id="block2-canvas" onclick="selectBlock(2)">
+                <p id="block2-text">Click to select Block 2</p>
+            </div>
+        </div>
+    
+        <!-- Gradient Distance Input -->
+        <div class="distance-input">
+            <label for="distance">Gradient Distance:</label>
+            <input type="number" id="distance" min="1" placeholder="Enter distance (e.g., 10)">
+        </div>
+    
+        <!-- Generate Gradient Button -->
+        <button class="generate-btn" onclick="generateGradient()">Generate</button>
+    
+        <!-- Gradient Display Section -->
+        <div id="gradient-display"></div>
+    </main>
+    
+    <footer>
+        <a href="/hues/hues.html">Hues Table</a>
+    </footer>
+
+    <script src="/static/main.js"></script>
+</body>
+</html>

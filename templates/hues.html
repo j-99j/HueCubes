@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hue Blocks - Hues</title>
+    <style>
+        body { text-align: center; font-family: Arial, sans-serif; }
+        table { margin: auto; border-collapse: collapse; width: 80%; }
+        th, td { border: 1px solid #ddd; padding: 8px; }
+        th { background-color: #f2f2f2; }
+    </style>
+</head>
+<body>
+    <h1>Hue Blocks - Hues</h1>
+    <a href="/">Back to Main</a>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Texture</th>
+            <th>Hue</th>
+        </tr>
+        {% for block in hues %}
+        <tr>
+            <td>{{ block.id }}</td>
+            <td><img src="{{ block.texture }}" alt="{{ block.id }}" style="width:50px;height:50px;"></td>
+            <td>{{ block.hue }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
